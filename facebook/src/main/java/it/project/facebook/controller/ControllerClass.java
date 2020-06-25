@@ -18,11 +18,17 @@ import it.project.facebook.service.FbService;
  */
 @RestController
 public class ControllerClass {
+	
 	@Autowired
 	FbService fbservice;
 
+	/**
+	 * Risponde alla richiesta GET per i metadati
+	 * 
+	 * @return elenco dei metadati con relativi campi
+	 */
 	@RequestMapping(value = "/metadata", method = RequestMethod.GET)
 	public ResponseEntity<Object> getMetadata() {
-		return new ResponseEntity<>(fbservice.getMetada(), HttpStatus.OK);
+		return new ResponseEntity<>(fbservice.getMetadata(), HttpStatus.OK);
 	}
 }

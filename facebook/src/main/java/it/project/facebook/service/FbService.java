@@ -4,6 +4,14 @@ import java.util.Collection;
 
 import it.project.facebook.model.Metadata;
 
+
+/**
+ * Questa interfaccia esegue due metodi che verranno implementati dalla classe FbServiceImpl
+ * 
+ * @author Giada Gatti
+ * @author Mattia Scuriatti
+ *
+ */
 public interface FbService {
-	public abstract Collection<Metadata> getMetada();
+	public abstract Collection<Metadata> getMetadata();
 }

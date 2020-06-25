@@ -8,11 +8,24 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import it.project.facebook.model.Metadata;
+
+
+/**
+ * Questa classe implementa i metodi di FbService
+ * 
+ * @author Giada Gatti
+ * @author Mattia Scuriatti
+ *
+ */
 @Service
 public class FbServiceImpl implements FbService {
 
 	private Map<String, Metadata> metadata = new HashMap<>();
 
+	/**
+	 * Nel costruttore viene popolato l'HashMap metadata che poi verrà visualizzato 
+	 * dal metodo getMetadata
+	 */
 	public FbServiceImpl() {
 		super();
 		try {
@@ -31,7 +44,7 @@ public class FbServiceImpl implements FbService {
 	 * @return la collezione dei metadati
 	 */
 	@Override
-	public Collection<Metadata> getMetada() {
+	public Collection<Metadata> getMetadata() {
 		return metadata.values();
 	}
 

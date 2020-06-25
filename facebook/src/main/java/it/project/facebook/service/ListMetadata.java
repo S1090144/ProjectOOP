@@ -4,6 +4,15 @@ import java.util.ArrayList;
 
 import it.project.facebook.model.Metadata;
 
+
+
+/**
+ * Questa classe, con il metodo getListMetadata, popola l'ArrayList metadata
+ * 
+ * @author Giada Gatti
+ * @author Mattia Scuriatti
+ *
+ */
 public class ListMetadata {
 	private static ArrayList<Metadata> metadata = new ArrayList<Metadata>();
 
