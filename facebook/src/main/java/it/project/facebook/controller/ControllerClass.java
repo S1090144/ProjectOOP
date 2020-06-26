@@ -25,6 +25,13 @@ public class ControllerClass {
 	@Autowired
 	FbService fbservice;
 	
+	/**
+	 * Risponde alla richiesta GET per il login 
+	 * 
+	 * @param param1
+	 * @param param2
+	 * @return "login effettuato", se la chiamata va a buon fine
+	 */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ResponseEntity<Object> getLogin(@RequestParam(name="page_id",defaultValue="null") String param1, 
 			                               @RequestParam(name="access_token",defaultValue="null") String param2){
