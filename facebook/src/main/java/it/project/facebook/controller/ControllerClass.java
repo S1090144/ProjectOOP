@@ -5,7 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import it.project.facebook.service.FbService;
 
@@ -18,10 +20,22 @@ import it.project.facebook.service.FbService;
  */
 @RestController
 public class ControllerClass {
-	
+	private static String token="gnkdfngkdfngkfdngkdfng"; //andrà il nostro token che dobbiamo generare
+	private static String page_id="634203367179312";
 	@Autowired
 	FbService fbservice;
-
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ResponseEntity<Object> getLogin(@RequestParam(name="page_id",defaultValue="null") String param1, 
+			                               @RequestParam(name="access_token",defaultValue="null") String param2){
+		if (param1.equals(page_id)  &&  param2.contentEquals(token)) {
+			return new ResponseEntity<>("Login Effettuato", HttpStatus.OK);
+		} else {
+			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"login fallito");
+		}
+											
+		
+}
 	/**
 	 * Risponde alla richiesta GET per i metadati
 	 * 
@@ -31,4 +45,5 @@ public class ControllerClass {
 	public ResponseEntity<Object> getMetadata() {
 		return new ResponseEntity<>(fbservice.getMetadata(), HttpStatus.OK);
 	}
+	
 }

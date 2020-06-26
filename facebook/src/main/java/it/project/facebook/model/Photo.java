@@ -9,13 +9,29 @@ package it.project.facebook.model;
  *
  */
 public class Photo extends Caption {
-
+    
+	private long photo_id;
 	private long height;
 	private long width;
 
 	public Photo() {
 		super();
 
+	}
+
+	/**
+	 * @return id della foto
+	 */
+	public long getPhoto_id() {
+		return photo_id;
+	}
+
+	/**
+	 * @param photo_id
+	 * viene settato l'id dell'immagine
+	 */
+	public void setPhoto_id(long photo_id) {
+		this.photo_id = photo_id;
 	}
 
 	/**
