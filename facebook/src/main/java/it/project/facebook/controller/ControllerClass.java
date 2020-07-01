@@ -20,8 +20,8 @@ import it.project.facebook.service.FbService;
  */
 @RestController
 public class ControllerClass {
-	private static String token="gnkdfngkdfngkfdngkdfng"; //andrà il nostro token che dobbiamo generare
-	private static String page_id="634203367179312";
+	protected static  String token="gnkdfngkdfngkfdngkdfng"; //andrà il nostro token che dobbiamo generare
+	protected static  String page_id="634203367179312";
 	@Autowired
 	FbService fbservice;
 	
@@ -39,8 +39,7 @@ public class ControllerClass {
 			return new ResponseEntity<>("Login Effettuato", HttpStatus.OK);
 		} else {
 			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"login fallito");
-		}
-											
+		}					
 		
 }
 	/**
@@ -51,6 +50,11 @@ public class ControllerClass {
 	@RequestMapping(value = "/metadata", method = RequestMethod.GET)
 	public ResponseEntity<Object> getMetadata() {
 		return new ResponseEntity<>(fbservice.getMetadata(), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/data", method = RequestMethod.GET)
+	public ResponseEntity<Object> getData() {
+		return new ResponseEntity<>(fbservice.getData(), HttpStatus.OK);
 	}
 	
 }

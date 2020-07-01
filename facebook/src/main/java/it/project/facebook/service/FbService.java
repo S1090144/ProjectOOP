@@ -3,6 +3,7 @@ package it.project.facebook.service;
 import java.util.Collection;
 
 import it.project.facebook.model.Metadata;
+import it.project.facebook.model.Photo;
 
 
 /**
@@ -14,4 +15,6 @@ import it.project.facebook.model.Metadata;
  */
 public interface FbService {
 	public abstract Collection<Metadata> getMetadata();
+
+	public abstract Collection<Photo> getData();
 }
