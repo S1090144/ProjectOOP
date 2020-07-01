@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import it.project.facebook.model.Credentials;
 import it.project.facebook.service.FbService;
+
 
 /**
  * Questa classe si occupa di effettuare delle richieste al web server
@@ -20,8 +22,7 @@ import it.project.facebook.service.FbService;
  */
 @RestController
 public class ControllerClass {
-	protected static  String token="gnkdfngkdfngkfdngkdfng"; //andrà il nostro token che dobbiamo generare
-	protected static  String page_id="634203367179312";
+	
 	@Autowired
 	FbService fbservice;
 	
@@ -35,7 +36,7 @@ public class ControllerClass {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ResponseEntity<Object> getLogin(@RequestParam(name="page_id",defaultValue="null") String param1, 
 			                               @RequestParam(name="access_token",defaultValue="null") String param2){
-		if (param1.equals(page_id)  &&  param2.contentEquals(token)) {
+		if (param1.equals(Credentials.getPage_id())  &&  param2.contentEquals(Credentials.getToken())) {
 			return new ResponseEntity<>("Login Effettuato", HttpStatus.OK);
 		} else {
 			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"login fallito");
@@ -52,6 +53,11 @@ public class ControllerClass {
 		return new ResponseEntity<>(fbservice.getMetadata(), HttpStatus.OK);
 	}
 	
+	/**
+	 * Risponde alla richiesta GET per i data 
+	 * 
+	 * @return id ,altezza, larghezza e caption della foto  
+	 */
 	@RequestMapping(value = "/data", method = RequestMethod.GET)
 	public ResponseEntity<Object> getData() {
 		return new ResponseEntity<>(fbservice.getData(), HttpStatus.OK);

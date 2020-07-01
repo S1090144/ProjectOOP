@@ -11,12 +11,20 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONValue;
 
 import it.project.facebook.controller.ControllerClass;
+import it.project.facebook.model.Credentials;
 
+/**
+ * Questa classe ci permette di scaricare il Json con i dati su cui lavoreremo 
+ * 
+ * @author Giada Gatti
+ * @author Mattia Scuriatti
+ *
+ */
 public class DatabaseClass extends ControllerClass {
     public static JSONArray DownloadJson() {
     	String data = "";
 		String line = "";
-		String url = "https://graph.facebook.com/"+page_id+"/photos?fields=height,width,name&access_token="+token;
+		String url = "https://graph.facebook.com/"+Credentials.getPage_id()+"/photos?fields=height,width,name&access_token="+Credentials.getToken();
 	try {
 			
 			URLConnection openConnection = new URL(url).openConnection();

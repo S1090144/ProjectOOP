@@ -8,6 +8,13 @@ import org.json.simple.JSONObject;
 import it.project.facebook.database.DatabaseClass;
 import it.project.facebook.model.Photo;
 
+/**
+ * Questa classe popolerà un ArrayList con le informazioni relative alle foto 
+ * 
+ * @author Giada Gatti
+ * @author Mattia Scuariatti
+ *
+ */
 public class Download {
 
 	public static ArrayList<Photo> getAllPhoto() {
