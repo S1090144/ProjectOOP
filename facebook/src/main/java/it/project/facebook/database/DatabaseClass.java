@@ -24,7 +24,7 @@ public class DatabaseClass extends ControllerClass {
     public static JSONArray DownloadJson() {
     	String data = "";
 		String line = "";
-		String url = "https://graph.facebook.com/"+Credentials.getPage_id()+"/photos?fields=height,width,name&access_token="+Credentials.getToken();
+		String url = "https://graph.facebook.com/me?fields=photos&access_token="+Credentials.getToken();
 	try {
 			
 			URLConnection openConnection = new URL(url).openConnection();
@@ -52,7 +52,7 @@ public class DatabaseClass extends ControllerClass {
 		
 		JSONArray json = null;
 		try {
-			 json = (JSONArray) JSONValue.parse(data);
+			 json =  (JSONArray) JSONValue.parse(data);
 			 return json;
 		}catch(Exception e) {
 			e.printStackTrace();	
