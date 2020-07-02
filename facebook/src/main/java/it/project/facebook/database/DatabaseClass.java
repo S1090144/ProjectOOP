@@ -7,7 +7,10 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
+
+
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
 import it.project.facebook.model.Credentials;
@@ -48,14 +51,15 @@ public class DatabaseClass {
 		}catch (Exception e) {	
 			e.printStackTrace();	
 		}	
-		
-		JSONArray json = null;
-		try {
-			 json =  (JSONArray) JSONValue.parse(data);
-			 return json;
-		}catch(Exception e) {
-			e.printStackTrace();	
-		}
-      return json;
+	   
+	JSONArray json = null;
+	try {
+		 json = (JSONArray) JSONValue.parse(data);
+		 return json;
+	}catch(Exception e) {
+		e.printStackTrace();	
+	}
+	
+	return json;
     }
 }
