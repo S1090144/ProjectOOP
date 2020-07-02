@@ -10,7 +10,6 @@ import java.net.URLConnection;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONValue;
 
-import it.project.facebook.controller.ControllerClass;
 import it.project.facebook.model.Credentials;
 
 /**
@@ -20,11 +19,11 @@ import it.project.facebook.model.Credentials;
  * @author Mattia Scuriatti
  *
  */
-public class DatabaseClass extends ControllerClass {
+public class DatabaseClass {
     public static JSONArray DownloadJson() {
     	String data = "";
 		String line = "";
-		String url = "https://graph.facebook.com/me?fields=photos&access_token="+Credentials.getToken();
+		String url = "https://graph.facebook.com/v7.0/me?fields=photos&access_token="+Credentials.getToken();
 	try {
 			
 			URLConnection openConnection = new URL(url).openConnection();
