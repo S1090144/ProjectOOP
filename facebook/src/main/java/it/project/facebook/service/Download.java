@@ -2,8 +2,8 @@ package it.project.facebook.service;
 
 import java.util.ArrayList;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import it.project.facebook.database.DatabaseClass;
 import it.project.facebook.model.Photo;
@@ -20,7 +20,7 @@ public class Download {
 	public static ArrayList<Photo> getAllPhoto() {
 		JSONArray parseArray = DatabaseClass.DownloadJson();
 		ArrayList<Photo> timelineArrayList = new ArrayList<Photo>();
-		for (int i = 0; i < parseArray.size(); i++) {
+		for (int i = 0; i < parseArray.length(); i++) {
 			Photo ph = new Photo();
 			JSONObject obj1 = (JSONObject) parseArray.get(i);
 			ph.setPhoto_id((long) obj1.get("id"));
