@@ -26,7 +26,7 @@ public class DatabaseClass {
 	public static JSONArray DownloadJson() {
 		String data = "";
 		String line = "";
-		String url = "https://graph.facebook.com/v7.0/me?fields=photos&access_token=" + Credentials.getToken();
+		String url = "https://graph.facebook.com/v7.0/"+Credentials.getPage_id()+"/photos?access_token=" + Credentials.getToken();
 		try {
 
 			URLConnection openConnection = new URL(url).openConnection();
@@ -53,7 +53,7 @@ public class DatabaseClass {
 			e.printStackTrace();
 		}
 		JSONObject obj = new JSONObject(data);
-		JSONArray json = obj.getJSONArray("photos");
+		JSONArray json = obj.getJSONArray("data");
 		return json;
 	}
 }

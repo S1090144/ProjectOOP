@@ -8,7 +8,7 @@ package it.project.facebook.model;
  */
 public class Credentials {
 	private static  String token="EAAD9HmSxRZBIBAFHfiGvnncJ7ODpZAoweeM1uHtU4vxDZCW6Ql4PwA7nOzpVBY5ef7iqtFhtmGscThZCtlfQDqr4Tk08LDZBbnFig18OwF06DMWXdS2yJTx0tuFElMJzCBCuNHOoaC1ZAPGBNvwLdSP8ZCtSLgQRuhoktkjrbND35I5zXKvPOlx"; //andrà il nostro token che dobbiamo generare
-	private static  String page_id="278306980186082";
+	private static  String page_id="102399151544029";
 	
 	
 	public Credentials() {
