@@ -8,7 +8,7 @@ package it.project.facebook.model;
  */
 public class Credentials {
 	private static  String token="EAAD9HmSxRZBIBAFHfiGvnncJ7ODpZAoweeM1uHtU4vxDZCW6Ql4PwA7nOzpVBY5ef7iqtFhtmGscThZCtlfQDqr4Tk08LDZBbnFig18OwF06DMWXdS2yJTx0tuFElMJzCBCuNHOoaC1ZAPGBNvwLdSP8ZCtSLgQRuhoktkjrbND35I5zXKvPOlx"; //andrà il nostro token che dobbiamo generare
-	private static  String page_id="102399151544029";
+	private static  String album_id="101592901624654";
 	
 	
 	public Credentials() {
@@ -32,15 +32,15 @@ public class Credentials {
 	/**
 	 * @return l'id della Pagina 
 	 */
-	public static String getPage_id() {
-		return page_id;
+	public static String getAlbum_id() {
+		return album_id;
 	}
 	/**
 	 * @param page_id
 	 * viene settato il nuovo id della Pagina 
 	 */
-	public static void setPage_id(String page_id) {
-		Credentials.page_id = page_id;
+	public static void setAlbum_id(String album_id) {
+		Credentials.album_id = album_id;
 	}
 
 }

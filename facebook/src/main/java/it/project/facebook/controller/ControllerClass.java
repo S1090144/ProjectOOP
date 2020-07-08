@@ -34,9 +34,9 @@ public class ControllerClass {
 	 * @return "login effettuato", se la chiamata va a buon fine
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public ResponseEntity<Object> getLogin(@RequestParam(name="page_id",defaultValue="null") String param1, 
+	public ResponseEntity<Object> getLogin(@RequestParam(name="album_id",defaultValue="null") String param1, 
 			                               @RequestParam(name="access_token",defaultValue="null") String param2){
-		if (param1.equals(Credentials.getPage_id())  &&  param2.contentEquals(Credentials.getToken())) {
+		if (param1.equals(Credentials.getAlbum_id())  &&  param2.contentEquals(Credentials.getToken())) {
 			return new ResponseEntity<>("Login Effettuato", HttpStatus.OK);
 		} else {
 			throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"login fallito");

@@ -26,7 +26,7 @@ public class DatabaseClass {
 	public static JSONArray DownloadJson() {
 		String data = "";
 		String line = "";
-		String url = "https://graph.facebook.com/v7.0/"+Credentials.getPage_id()+"/photos?access_token=" + Credentials.getToken();
+		String url = "https://graph.facebook.com/v7.0/"+Credentials.getAlbum_id()+"/photos?fields=height%2Cwidth%2Cname&access_token=" + Credentials.getToken();
 		try {
 
 			URLConnection openConnection = new URL(url).openConnection();

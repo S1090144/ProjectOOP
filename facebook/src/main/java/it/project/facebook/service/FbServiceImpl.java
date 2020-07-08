@@ -21,7 +21,7 @@ import it.project.facebook.model.Photo;
 public class FbServiceImpl implements FbService {
 
 	private Map<String, Metadata> metadata = new HashMap<>();
-	private Map<Long, Photo> allphotos = new HashMap<>();
+	private Map<String, Photo> allphotos = new HashMap<>();
 
 	/**
 	 * Nel costruttore viene popolato l'HashMap metadata che poi verrà visualizzato

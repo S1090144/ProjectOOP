@@ -10,7 +10,7 @@ package it.project.facebook.model;
  */
 public class Photo extends Caption {
     
-	private long photo_id;
+	private String photo_id;
 	private long height;
 	private long width;
 
@@ -22,7 +22,7 @@ public class Photo extends Caption {
 	/**
 	 * @return id della foto
 	 */
-	public long getPhoto_id() {
+	public String getPhoto_id() {
 		return photo_id;
 	}
 
@@ -30,7 +30,7 @@ public class Photo extends Caption {
 	 * @param photo_id
 	 * viene settato l'id dell'immagine
 	 */
-	public void setPhoto_id(long photo_id) {
+	public void setPhoto_id(String photo_id) {
 		this.photo_id = photo_id;
 	}
 
