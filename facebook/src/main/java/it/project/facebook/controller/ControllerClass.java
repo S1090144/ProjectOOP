@@ -11,6 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import it.project.facebook.model.Credentials;
 import it.project.facebook.service.FbService;
+import it.project.facebook.utils.stats.StatsPhotos;
 
 
 /**
@@ -62,5 +63,15 @@ public class ControllerClass {
 	public ResponseEntity<Object> getData() {
 		return new ResponseEntity<>(fbservice.getData(), HttpStatus.OK);
 	}
+	
+	@RequestMapping(value = "/type_stats", method = RequestMethod.GET)
+	public ResponseEntity<Object> getStats() {
+		String type_photos=null;
+		StatsPhotos stats = new StatsPhotos();
+		type_photos = stats.TypePhotos();
+		return new ResponseEntity<>(type_photos, HttpStatus.OK);
+	}
+	
+	
 	
 }
