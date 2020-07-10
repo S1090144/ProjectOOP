@@ -37,7 +37,7 @@ public class StatsPhotos {
 			 count = 0; }  
 			else {count= trim.split("\\w+").length;}
 			
-			String str="Parole nella caption della "+ (i+1) + " foto: " + count;
+			String str="Parole nella caption della "+ (i+1) + "° foto: " + count;
 			numCaption.add(str);
 
 		}
