@@ -1,5 +1,8 @@
 package it.project.facebook.controller;
 
+import java.util.ArrayList;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -65,13 +68,20 @@ public class ControllerClass {
 	}
 	
 	@RequestMapping(value = "/type_stats", method = RequestMethod.GET)
-	public ResponseEntity<Object> getStats() {
+	public ResponseEntity<Object> getType_Stats() {
 		String type_photos=null;
 		StatsPhotos stats = new StatsPhotos();
 		type_photos = stats.TypePhotos();
 		return new ResponseEntity<>(type_photos, HttpStatus.OK);
 	}
 	
+	@RequestMapping(value = "/caption_stats", method = RequestMethod.GET)
+	public ResponseEntity<Object> getStats() {
+		ArrayList<String> lenght_caption = new ArrayList<String>();
+		StatsPhotos stats1 = new StatsPhotos();
+		lenght_caption = stats1.CaptionPhotos();
+		return new ResponseEntity<>(lenght_caption, HttpStatus.OK);
+	}
 	
 	
 }

@@ -6,8 +6,9 @@ import it.project.facebook.model.Photo;
 import it.project.facebook.service.Download;
 
 public class StatsPhotos {
+	 ArrayList<Photo> totPhotos = Download.getAllPhoto();
+	 ArrayList<String> numCaption = new ArrayList<String>();
 	public String TypePhotos() {
-		ArrayList<Photo> totPhotos = Download.getAllPhoto();
 		int quadrate = 0;
 		int orizzontali = 0;
 		int verticali = 0;
@@ -26,4 +27,23 @@ public class StatsPhotos {
 		return t_photos;
 
 	}
+
+	public ArrayList<String> CaptionPhotos() {
+		for (int i = 0; i < totPhotos.size(); i++) {
+			String caption = totPhotos.get(i).getName();
+			String trim = caption.trim();
+			int count;
+			if (trim.isEmpty()) {
+			 count = 0; }  
+			else {count= trim.split("\\w+").length;}
+			
+			String str="Parole nella caption della "+ (i+1) + " foto: " + count;
+			numCaption.add(str);
+
+		}
+		return numCaption;
+	}
+
+		
+	
 }
