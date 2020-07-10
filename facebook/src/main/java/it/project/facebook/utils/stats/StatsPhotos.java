@@ -27,15 +27,16 @@ public class StatsPhotos {
 		return t_photos;
 
 	}
-
+	
 	public ArrayList<String> CaptionPhotos() {
+		int count;
 		for (int i = 0; i < totPhotos.size(); i++) {
+			if (totPhotos.get(i).getName() != null) {
 			String caption = totPhotos.get(i).getName();
 			String trim = caption.trim();
-			int count;
-			if (trim.isEmpty()) {
-			 count = 0; }  
-			else {count= trim.split("\\w+").length;}
+			
+			count= trim.split("\\w+").length;}
+			else { count=0;}
 			
 			String str="Parole nella caption della "+ (i+1) + "° foto: " + count;
 			numCaption.add(str);
