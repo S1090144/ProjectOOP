@@ -14,7 +14,7 @@ import it.project.facebook.model.Photo;
  *
  */
 public interface FbService {
-	public abstract Collection<Metadata> getMetadata();
+	public  Collection<Metadata> getMetadata();
 
-	public abstract Collection<Photo> getData();
+	public  Collection<Photo> getData();
 }
