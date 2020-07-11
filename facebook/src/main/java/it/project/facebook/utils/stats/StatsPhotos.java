@@ -5,9 +5,25 @@ import java.util.ArrayList;
 import it.project.facebook.model.Photo;
 import it.project.facebook.service.Download;
 
+/**
+ * Si effettuano le statistiche sulla tipologia di immagine e sulla caption
+ * 
+ * @author Giada Gatti
+ * @author Mattia Scuriatti
+ *
+ */
 public class StatsPhotos {
 	 ArrayList<Photo> totPhotos = Download.getAllPhoto();
 	 ArrayList<String> numCaption = new ArrayList<String>();
+	
+	 
+	 
+	 
+	 /**
+	  * Questo metodo viene utilizzato per fare statistiche sulla tipologia di immagini 
+	  * 
+	 * @return una stringa che contiene il numero di immagini per tipologia 
+	 */
 	public String TypePhotos() {
 		int quadrate = 0;
 		int orizzontali = 0;
@@ -28,6 +44,11 @@ public class StatsPhotos {
 
 	}
 	
+	/**
+	 * Questo metodo viene utilizzato per fare statistiche sulla didascalia dell'immmagine 
+	 * 
+	 * @return un'ArrayList di stringhe che contiene il numero di parole per ogni immagine 
+	 */
 	public ArrayList<String> CaptionPhotos() {
 		int count;
 		for (int i = 0; i < totPhotos.size(); i++) {

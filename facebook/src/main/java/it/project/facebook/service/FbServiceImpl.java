@@ -56,6 +56,11 @@ public class FbServiceImpl implements FbService {
 		return metadata.values();
 	}
 
+	
+	
+	/**
+	 *@return la collezione delle foto
+	 */
 	@Override
 	public Collection<Photo> getData() {
 		return allphotos.values();

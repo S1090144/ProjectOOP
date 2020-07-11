@@ -1,5 +1,6 @@
 package it.project.facebook.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -63,10 +64,15 @@ public class ControllerClass {
 	 * @return id ,altezza, larghezza e caption della foto  
 	 */
 	@RequestMapping(value = "/data", method = RequestMethod.GET)
-	public ResponseEntity<Object> getData() {
+	public ResponseEntity<Object> getData() throws IOException{
 		return new ResponseEntity<>(fbservice.getData(), HttpStatus.OK);
 	}
 	
+	/**
+	 * Risponde alla richiesta GET per i tipi di immagini
+	 * 
+	 * @return una stringa con il numero di immagini per ogni tipologia
+	 */
 	@RequestMapping(value = "/type_stats", method = RequestMethod.GET)
 	public ResponseEntity<Object> getType_Stats() {
 		String type_photos=null;
@@ -75,6 +81,11 @@ public class ControllerClass {
 		return new ResponseEntity<>(type_photos, HttpStatus.OK);
 	}
 	
+	/**
+	 * Risponde alla richiesta GET per la caption dell'immagine
+	 * 
+	 * @return un'ArrayList con il numero di parole per ogni immagine 
+	 */
 	@RequestMapping(value = "/caption_stats", method = RequestMethod.GET)
 	public ResponseEntity<Object> getStats() {
 		ArrayList<String> lenght_caption = new ArrayList<String>();
