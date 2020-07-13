@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.expression.spel.InternalParseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,8 +14,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+
+
+import it.project.facebook.exception.FilterIllegalArgumentException;
+import it.project.facebook.exception.FilterNotFoundException;
+import it.project.facebook.exception.InternalGeneralException;
 import it.project.facebook.model.Credentials;
 import it.project.facebook.service.FbService;
+import it.project.facebook.service.FilterParser;
 import it.project.facebook.utils.stats.StatsPhotos;
 
 
@@ -94,5 +101,11 @@ public class ControllerClass {
 		return new ResponseEntity<>(lenght_caption, HttpStatus.OK);
 	}
 	
+	
+	@RequestMapping(value = "/caption", method = RequestMethod.POST)
+	public ResponseEntity<Object> getPhotosWithCaption(@RequestParam Object filter) 
+		throws InternalParseException, FilterNotFoundException, FilterIllegalArgumentException, InternalGeneralException{
+		return new ResponseEntity<>(FilterParser.JsonParserColumn(filter), HttpStatus.OK);
+	}
 	
 }
