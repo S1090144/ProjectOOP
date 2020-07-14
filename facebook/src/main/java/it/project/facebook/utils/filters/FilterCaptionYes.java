@@ -12,11 +12,11 @@ public class FilterCaptionYes extends FilterArrayListString implements Filter {
 
 	@Override
 	public boolean filter(Photo picture) {
-		for(String p: param) {
-		if (!(picture.getName().equals(p))) {
+		
+		if (!(picture.getName()==null)) {
 			return true;
 
-		}
+		
 		}
 		return false;
 	}
