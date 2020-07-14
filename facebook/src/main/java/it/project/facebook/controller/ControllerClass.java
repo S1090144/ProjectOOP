@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.expression.spel.InternalParseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -103,9 +104,9 @@ public class ControllerClass {
 	
 	
 	@RequestMapping(value = "/caption", method = RequestMethod.POST)
-	public ResponseEntity<Object> getPhotosWithCaption(@RequestParam Object filter) 
+	public ResponseEntity<Object> getPhotosWithCaption(@RequestBody Object filter) 
 		throws InternalParseException, FilterNotFoundException, FilterIllegalArgumentException, InternalGeneralException{
-		return new ResponseEntity<>(FilterParser.JsonParserColumn(filter), HttpStatus.OK);
+		return new ResponseEntity<>(FilterParser.JsonParserColumn(filter), HttpStatus.CREATED);
 	}
 	
 }

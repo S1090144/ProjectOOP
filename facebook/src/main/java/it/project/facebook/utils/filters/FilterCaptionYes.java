@@ -2,21 +2,22 @@ package it.project.facebook.utils.filters;
 
 import it.project.facebook.model.Photo;
 
-public class FilterCaptionYes implements Filter {
+public class FilterCaptionYes extends FilterArrayListString implements Filter {
 
-	public FilterCaptionYes() {
-		super();
+	
 
+	public FilterCaptionYes(Object parameters) {
+		super(parameters);
 	}
 
 	@Override
 	public boolean filter(Photo picture) {
-
-		if (!(picture.getName().equals(null))) {
+		for(String p: param) {
+		if (!(picture.getName().equals(p))) {
 			return true;
 
 		}
-
+		}
 		return false;
 	}
 

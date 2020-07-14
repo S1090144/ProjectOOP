@@ -11,7 +11,7 @@ import it.project.facebook.model.Photo;
 import it.project.facebook.utils.filters.Filter;
 
 public class FilterService {
-private final static String path = "it.univpm.ProgettoOOP.util.filter.";
+private final static String path = "it.project.facebook.utils.filters.";
 	
     private static ArrayList<Photo> all_photos = Download.getAllPhoto();
     public static Filter instanceFilter(String column,String operator,Object param) 
