@@ -10,14 +10,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 import it.project.facebook.exception.FilterIllegalArgumentException;
 import it.project.facebook.exception.FilterNotFoundException;
 import it.project.facebook.exception.InternalGeneralException;
-import it.project.facebook.model.Credentials;
 import it.project.facebook.service.FbService;
 import it.project.facebook.service.FilterParser;
 import it.project.facebook.utils.stats.StatsPhotos;
@@ -48,8 +45,10 @@ public class ControllerClass {
 	/**
 	 * Risponde alla richiesta GET per i data
 	 * 
-	 * @return id ,altezza, larghezza e caption della foto
+	 * @return la collezione dei dati con relativi campi
+	 * @throws IOException
 	 */
+
 	@RequestMapping(value = "/data", method = RequestMethod.GET)
 	public ResponseEntity<Object> getData() throws IOException {
 		return new ResponseEntity<>(fbservice.getData(), HttpStatus.OK);
@@ -81,6 +80,16 @@ public class ControllerClass {
 		return new ResponseEntity<>(lenght_caption, HttpStatus.OK);
 	}
 
+	/**
+	 * Risponde alla richiesta POST per i dati filtrati
+	 * 
+	 * @param filter
+	 * @return la collezione filtrata dei dati
+	 * @throws InternalParseException
+	 * @throws FilterNotFoundException
+	 * @throws FilterIllegalArgumentException
+	 * @throws InternalGeneralException
+	 */
 	@RequestMapping(value = "/filtered_data", method = RequestMethod.POST)
 	public ResponseEntity<Object> getPhotosWithCaption(@RequestBody Object filter) throws InternalParseException,
 			FilterNotFoundException, FilterIllegalArgumentException, InternalGeneralException {

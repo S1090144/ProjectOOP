@@ -3,8 +3,8 @@ package it.project.facebook.exception;
 /**
  * Si personalizza una classe di tipo IllegalArgumentException
  * 
- * @author Giada Gatti
  * @author Mattia Scuriatti
+ * @author Giada Gatti
  *
  */
 public class FilterIllegalArgumentException extends IllegalArgumentException {
