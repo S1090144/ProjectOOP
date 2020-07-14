@@ -11,12 +11,15 @@ import it.project.facebook.model.Photo;
 /**
  * Questa classe popolerà un ArrayList con le informazioni relative alle foto 
  * 
+ * @author Mattia Scuriatti
  * @author Giada Gatti
- * @author Mattia Scuariatti
  *
  */
 public class Download {
 
+	/**
+	 * @return l'ArrayList con tutte le foto con i relativi campi 
+	 */
 	public static ArrayList<Photo> getAllPhoto() {
 		JSONArray parseArray = DatabaseClass.DownloadJson();
 		ArrayList<Photo> timelineArrayList = new ArrayList<Photo>();

@@ -1,15 +1,14 @@
 package it.project.facebook.model;
 
-
-
 /**
+ * Questa classe contiene gli attributi delle foto, compresa la didascalia
  * 
- * @author Giada Gatti
  * @author Mattia Scuriatti
+ * @author Giada Gatti
  *
  */
 public class Photo extends Caption {
-    
+
 	private String photo_id;
 	private long height;
 	private long width;
@@ -27,8 +26,7 @@ public class Photo extends Caption {
 	}
 
 	/**
-	 * @param photo_id
-	 * viene settato l'id dell'immagine
+	 * @param photo_id viene settato l'id dell'immagine
 	 */
 	public void setPhoto_id(String photo_id) {
 		this.photo_id = photo_id;
@@ -42,8 +40,7 @@ public class Photo extends Caption {
 	}
 
 	/**
-	 * @param height
-	 * viene settata la nuova altezza dell'immagine
+	 * @param height viene settata la nuova altezza dell'immagine
 	 */
 	public void setHeight(long height) {
 		this.height = height;
@@ -57,8 +54,7 @@ public class Photo extends Caption {
 	}
 
 	/**
-	 * @param width
-	 * viene settata la nuova larghezza dell'immagine
+	 * @param width viene settata la nuova larghezza dell'immagine
 	 */
 	public void setWidth(long width) {
 		this.width = width;

@@ -1,8 +1,10 @@
 package it.project.facebook.model;
 
 /**
- * @author Giada Gatti
+ * Questa classe contiene gli attributi di ogni campo del nostro dataset
+ * 
  * @author Mattia Scuriatti
+ * @author Giada Gatti
  */
 public class Metadata {
 	private String alias;
@@ -10,6 +12,7 @@ public class Metadata {
 	private String type;
 
 	/**
+	 * 
 	 * @param alias       è il nome del campo
 	 * @param sourceField è la descrizione del campo
 	 * @param type        è il tipo del campo
@@ -29,8 +32,7 @@ public class Metadata {
 	}
 
 	/**
-	 * @param alias 
-	 * viene settato il nuovo nome del campo
+	 * @param alias viene settato il nuovo nome del campo
 	 */
 	public void setAlias(String alias) {
 		this.alias = alias;
@@ -44,8 +46,7 @@ public class Metadata {
 	}
 
 	/**
-	 * @param sourceField 
-	 * viene settata la nuova descrizione del campo
+	 * @param sourceField viene settata la nuova descrizione del campo
 	 */
 	public void setSourceField(String sourceField) {
 		this.sourceField = sourceField;
@@ -59,8 +60,7 @@ public class Metadata {
 	}
 
 	/**
-	 * @param type 
-	 * viene settato il nuovo tipo del campo
+	 * @param type viene settato il nuovo tipo del campo
 	 */
 	public void setType(String type) {
 		this.type = type;

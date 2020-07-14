@@ -13,8 +13,8 @@ import it.project.facebook.model.Photo;
 /**
  * Questa classe implementa i metodi di FbService
  * 
- * @author Giada Gatti
  * @author Mattia Scuriatti
+ * @author Giada Gatti
  *
  */
 @Service
