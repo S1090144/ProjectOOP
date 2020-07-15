@@ -15,7 +15,7 @@ public class FilterCaptionYes extends FilterArrayListString implements Filter {
 	}
 
 	/**
-	 * Questo metodo verifica che la nostro foto abbia o meno una caption
+	 * Questo metodo verifica che la nostro foto abbia una caption
 	 */
 	@Override
 	public boolean filter(Photo picture) {
