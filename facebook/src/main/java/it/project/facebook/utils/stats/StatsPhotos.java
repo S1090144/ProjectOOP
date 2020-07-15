@@ -8,21 +8,19 @@ import it.project.facebook.service.Download;
 /**
  * Si effettuano le statistiche sulla tipologia di immagine e sulla caption
  * 
- * @author Giada Gatti
  * @author Mattia Scuriatti
+ * @author Giada Gatti
  *
  */
 public class StatsPhotos {
-	 ArrayList<Photo> totPhotos = Download.getAllPhoto();
-	 ArrayList<String> numCaption = new ArrayList<String>();
-	
-	 
-	 
-	 
-	 /**
-	  * Questo metodo viene utilizzato per fare statistiche sulla tipologia di immagini 
-	  * 
-	 * @return una stringa che contiene il numero di immagini per tipologia 
+	ArrayList<Photo> totPhotos = Download.getAllPhoto();
+	ArrayList<String> numCaption = new ArrayList<String>();
+
+	/**
+	 * Questo metodo viene utilizzato per fare statistiche sulla tipologia di
+	 * immagini
+	 * 
+	 * @return una stringa che contiene il numero di immagini per tipologia
 	 */
 	public String TypePhotos() {
 		int quadrate = 0;
@@ -43,29 +41,31 @@ public class StatsPhotos {
 		return t_photos;
 
 	}
-	
+
 	/**
-	 * Questo metodo viene utilizzato per fare statistiche sulla didascalia dell'immmagine 
+	 * Questo metodo viene utilizzato per fare statistiche sulla didascalia
+	 * dell'immmagine
 	 * 
-	 * @return un'ArrayList di stringhe che contiene il numero di parole per ogni immagine 
+	 * @return un'ArrayList di stringhe che contiene il numero di parole per ogni
+	 *         immagine
 	 */
 	public ArrayList<String> CaptionPhotos() {
 		int count;
 		for (int i = 0; i < totPhotos.size(); i++) {
 			if (totPhotos.get(i).getName() != null) {
-			String caption = totPhotos.get(i).getName();
-			String trim = caption.trim();
-			
-			count= trim.split("\\w+").length;}
-			else { count=0;}
-			
-			String str="Parole nella caption della "+ (i+1) + "° foto: " + count;
+				String caption = totPhotos.get(i).getName();
+				String trim = caption.trim();
+
+				count = trim.split("\\w+").length;
+			} else {
+				count = 0;
+			}
+
+			String str = "Parole nella caption della " + (i + 1) + "° foto: " + count;
 			numCaption.add(str);
 
 		}
 		return numCaption;
 	}
 
-		
-	
 }
