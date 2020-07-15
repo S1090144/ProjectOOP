@@ -1,0 +1,8 @@
+it.project.facebook
+it.project.facebook.controller
+it.project.facebook.database
+it.project.facebook.exception
+it.project.facebook.model
+it.project.facebook.service
+it.project.facebook.utils.filters
+it.project.facebook.utils.stats

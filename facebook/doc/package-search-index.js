@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"it.project.facebook"},{"l":"it.project.facebook.controller"},{"l":"it.project.facebook.database"},{"l":"it.project.facebook.exception"},{"l":"it.project.facebook.model"},{"l":"it.project.facebook.service"},{"l":"it.project.facebook.utils.filters"},{"l":"it.project.facebook.utils.stats"}]

@@ -45,7 +45,7 @@ public class Credentials {
 	}
 
 	/**
-	 * @param page_id viene settato il nuovo id dell'album
+	 * @param album_id viene settato il nuovo id dell'album
 	 */
 	public static void setAlbum_id(String album_id) {
 		Credentials.album_id = album_id;
