@@ -73,7 +73,7 @@ public class ControllerClass {
 	 * @return un'ArrayList con il numero di parole per ogni immagine
 	 */
 	@RequestMapping(value = "/caption_stats", method = RequestMethod.GET)
-	public ResponseEntity<Object> getStats() {
+	public ResponseEntity<Object> getCaption_Stats() {
 		ArrayList<String> lenght_caption = new ArrayList<String>();
 		StatsPhotos stats1 = new StatsPhotos();
 		lenght_caption = stats1.CaptionPhotos();
