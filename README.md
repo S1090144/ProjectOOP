@@ -95,32 +95,49 @@ Per i nostri filtri sono disponibili tali operatori logici:
 
 ## UML
 ### Diagrammi delle Classi
-* it.project.facebook.**controller**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Controller.png?raw=true" width=300>
-* it.project.facebook.**database**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Database.png?raw=true" width=300>
-* it.project.facebook.**exception**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Exception.png?raw=true" width=400>
-* it.project.facebook.**model**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Model.png?raw=true" width=400>
-* it.project.facebook.**service**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Service.png?raw=true" width=400>
-* it.project.facebook.utils.**filters**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Filters.png?raw=true" width=400>
-* it.project.facebook.utils.**stats**
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Stats.png?raw=true" width=300>
+* **it.project.facebook.controller**
+
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Controller.png?raw=true" width=300>
+
+* **it.project.facebook.database**</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Database.png?raw=true" width=300>
+
+* **it.project.facebook.exception**</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Exception.png?raw=true" width=400>
+* it.project.facebook.**model**</br></br>
+<img
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Model.png?raw=true" width=400>
+* it.project.facebook.**service**</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Service.png?raw=true" width=700>
+* it.project.facebook.utils.**filters**</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Filters.png?raw=true" width=700>
+* it.project.facebook.utils.**stats**</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Stats.png?raw=true" width=300>
 
 ## Diagrammi delle sequenze
-* **GET**/ data
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_Data%20.png?raw=true" width=500>
-* **GET**/ metadata
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_Metadata.png?raw=true" width=500>
+- **GET**/ data</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_Data%20.png?raw=true" width=500>
 
-* **GET**/ caption_stats
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_caption_stats.png?raw=true" width=500>
-* **GET**/ type_stats
-<img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_type_stats.png?raw=true" width=500>
-* **POST**/ filtered_data
+* **GET**/ metadata</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_Metadata.png?raw=true" width=500>
+
+* **GET**/ caption_stats</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_caption_stats.png?raw=true" width=500>
+
+* **GET**/ type_stats</br></br>
+<img 
+src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/GET_type_stats.png?raw=true" width=500>
+
+* **POST**/ filtered_data</br></br>
 <img src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Sequence%20Diagramm/POST_filtered_data.png?raw=true" width=500>
 
 ### Esempi di chiamate
