@@ -95,16 +95,16 @@ Per i nostri filtri sono disponibili tali operatori logici:
 
 ## UML
 ### Diagrammi delle Classi
-* **it.project.facebook.controller**
+* it.project.facebook.**controller**
 
 <img 
 src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Controller.png?raw=true" width=300>
 
-* **it.project.facebook.database**</br></br>
+* it.project.facebook.**database**</br></br>
 <img 
 src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Database.png?raw=true" width=300>
 
-* **it.project.facebook.exception**</br></br>
+* it.project.facebook.**exception**</br></br>
 <img 
 src="https://github.com/S1090144/ProjectOOP/blob/master/Diagrammi%20UML/Class%20Diagramm/Exception.png?raw=true" width=400>
 * it.project.facebook.**model**</br></br>
